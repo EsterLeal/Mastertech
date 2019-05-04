@@ -1,0 +1,193 @@
+body{
+    margin: 0;
+    font-family: sans-serif;
+}
+
+.grid {
+    display: grid;
+
+    /* repeate, se coloco o 10 ele repete 10 vezes iguais */
+
+    grid-template-columns: repeat(1, auto);
+    grid-template-rows: repeat(5, minmax(100px, auto));
+
+    /* Não tem haver com nenhuma tag, somente ao grid area - Esta é a estrutura do site: quando tem mais colunas, escreve várias vezes */
+
+    grid-template-areas: 
+    "header"
+    "main"
+    "contato"
+    "feedback"
+    "footer"
+}
+/* deve criar um seletor para cada tag do grid */
+/* é uma tag e não uma classe, toda classe inicia com .  */
+
+
+header {
+    background-image: url(img/banner.png);
+    background-position: center;
+    background-size: cover; 
+    border-top: 5px solid #1db954;
+    /* sempre que for colocar o texto no primeiro plano, utiliza o white */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    grid-area: header;
+    height: 40vw;
+    /* na horizontal */
+    justify-content: center;
+    /* na vertical */
+    align-items: center;
+}
+
+.titulo {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+
+header h3 {
+    font-family: "Pacifico";
+    font-size: 1.5rem;
+    font-weight: 100;
+}
+
+header h3 span {
+    color: #1db954;
+}
+
+header p {
+    width: 75%;
+    word-wrap: normal;
+}
+
+.imagens-header {
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
+}
+
+.imagens-header div {
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 100%;
+    padding: 10px;
+    /* tempo de transição - define quanto tempo a animação acontece - coloca o transition no elemento que quer animar */
+    transition: 1s;
+}
+
+.imagens-header div:hover {
+    background-color: #1db954;
+}
+
+header .mao {
+    align-self: flex-end;
+    display: none;
+    margin-left: 20px;
+    height: 80%;
+}
+
+header .mao img {
+    height: 100%;
+}
+
+
+main {
+    grid-area: main;
+}
+
+.contato {
+    grid-area: contato;
+}
+
+.feedback {
+    grid-area:feedback;
+}
+
+footer {
+    grid-area: footer;
+}
+
+/* breakpoint celular */
+@media(min-width: 576px) {
+    header {
+        flex-direction: row;
+    }
+
+    header h3{
+        font-size: 1.5rem;
+    }
+    .titulo{
+        display: block;
+    }
+
+
+
+    header .mao {
+        display: block;
+    }
+}
+
+/* breakpoint tablet */
+@media(min-width: 768px) {
+    header{
+        flex-direction: row;
+    }
+}
+
+
+
+/* 
+
+
+.back {
+    
+    color: #1db954;
+}
+
+.span {
+    color: #1db954;
+}
+
+.icones {
+    size: 50px;
+} */
+
+
+
+
+/* 
+.header {
+    background-color:#1db954;} */
+
+    /* align-items: center;
+    display: flex;
+    grid-area: header;
+    justify-content: space-between;
+    padding: 0 10px; 
+}*/
+  
+
+/* 
+.header {
+    display:block;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    background:#1db954;
+    text-align:center;
+    padding: 20px 12px;
+    object-fit: contain;
+
+} */
+
+/* .footer {
+
+}
+
+.main { 
+
+} */

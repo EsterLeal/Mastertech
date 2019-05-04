@@ -1,0 +1,71 @@
+/*
+COMENTÁRIOS NO CSS
+*/
+
+body{
+    font-family: sans-serif;
+    margi n: 0;
+}
+
+header{
+    background-color: rgb(98, 98, 219);
+}
+
+.nav-header a{
+    text-decoration: none;
+}
+
+.cor-vermelha {
+    color: red;
+}
+
+#header-pesquisa{
+    color: green;
+}
+
+/* ::placeholder é um pseudoelemento, e só existe quando há uma tag input */
+
+#header-pesquisa::placeholder {
+    color: aqua;
+}
+
+textarea{
+    resize: none;
+    }
+
+    /* Assim que se usa seletores múltiplos */
+
+    .formulario-contato{
+        background-color: lightgray;
+        border-radius: 10px;
+        box-shadow: 1 px 1px 15px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .formulario-contato p, .formulario-contato h3{
+        font-size: 18pt;
+    }
+
+    .negrito{
+        font-weight: bold;
+    }
+/* hover é quando o mouse passa em cima da palavra e coloca uma estilização*/
+
+    .negrito:hover{
+        color: lawngreen;
+    }
+
+    img{
+        width: 800px;
+        height: 500px;
+        opacity: 0.5;
+    }
+
+    img:hover{
+        opacity: 1;
+    }
+
+    
+    button{
+        cursor: pointer;
+    }
+

@@ -1,0 +1,93 @@
+body{
+    font-family: sans-serif;
+    background-color: rgb(228, 228, 79);
+    margin: 0;
+}
+
+/* p{
+    font-size: 1rem;
+    text-align: center;
+   
+} */
+
+/* LISTAR AS PROPRIEDADES EM ORDEM ALFABÉTICA - para definir a borda coloca a espessura, tipo (pontilhado ou reta) e a cor. */
+/* div{
+    border: 1px solid black;
+    height: 100vh;
+    margin: 5%;
+    width: 100vw;
+} */
+
+    /* width: 100vw (view width - para calcular td) ; usa o tamanho da tela como referência. É a largura da tela (bom para responsividade)
+    img usar sempre a mesma unidade de medida vw ou px para altura e largura para não dar problemas*/
+    
+
+
+/* div = os valores organizam o elemento no box mobile // É possivel colocar porcentagem, porem o height pode
+dar problemas // da para usar px, ou porcentagem // deve ter uma altura com uma unidade que não seja porcentagem
+*/
+
+/* .banner{
+    background-image: url(https://s04.video.glbimg.com/x720/6914483.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 50vw;
+    width: 100vw;
+} */
+
+.grid{
+    display: grid;
+    grid-template-columns: repeat(4, 25vw);
+    grid-template-rows: repeat(4, auto);
+    /* as aspas dividem a linha: */
+    /* as colunas dividem com espaço */
+    grid-template-areas:
+        "header header header header"
+        /* para deixar um espaço vazio na tab, coloca um . (ponto)  */
+        "main main . sidebar"
+        "main main . ."
+        "footer footer footer footer";
+
+}
+
+/* definindo um nome para uma tag no css */
+
+header{
+    align-items: center;
+    background-color: blue;
+    display: flex;
+    grid-area: header;
+    justify-content: space-between;
+    padding: 0 10px;
+}
+
+header h3{
+    color: lightgray;
+}
+
+header nav a{
+    color: lightgray;
+text-decoration: none;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-around;
+    width: 30%;
+}
+
+main{
+    background-color: blueviolet;
+    grid-area: main;
+}
+
+.sidebar{
+    background-color: red;
+    grid-area: sidebar;
+}
+
+footer{
+    background-color: mediumseagreen;
+    grid-area: footer;
+}

@@ -1,0 +1,1 @@
+#EXERCICIO 1 - Fazer uma função que recebe um número inteiro por parâmetro e retorna verdadeiro se ele for par e falso se for ímpar. 

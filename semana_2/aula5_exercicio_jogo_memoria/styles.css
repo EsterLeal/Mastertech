@@ -1,0 +1,49 @@
+header {
+    display: flex;
+    justify-content: center;    
+}
+
+.imagens {
+    display: block;
+    height: 20%;
+    width: 20%;
+    justify-content: center;
+}
+
+
+.verso {
+    content: url(https://2.bp.blogspot.com/-3VvNYULjlMY/VsDKW9mZx2I/AAAAAAAAEnk/X0Rjz_68DWU/s300-c/1.png);
+}
+
+/* .imagem {
+    align-items: center;
+    display: flex;
+} */
+
+
+.imagens1 {
+    align-items: center;
+    display: flex;
+}
+
+.imagens2 {
+    align-items: center;
+    display: flex;
+}
+
+/* img {
+    cursor: pointer;
+    justify-items: center;
+} */
+
+main {
+    /* align-items: center; */
+    display: flex;
+    justify-content: center;
+}
+
+footer {
+    /* align-items: center; */
+    display: flex;
+    justify-content: center;
+}

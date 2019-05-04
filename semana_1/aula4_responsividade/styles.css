@@ -1,0 +1,138 @@
+body{
+    background-color:lightblue;
+    margin: 0;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows:  repeat(5, minmax(30px, auto));
+    grid-template-areas: 
+    "header header header header header"
+    "sidebar sidebar sidebar sidebar sidebar"
+    "main main main main main";
+}
+
+header{
+    align-items: center;
+    display: flex;
+    grid-area: header;
+    justify-content: space-between;
+    padding: 0 10px;
+}
+
+header nav{
+    display: none;
+}
+
+/* como selecinar somente um A, caso ele seja o primeiro filho de uma nav/first child */
+header nav a:nth-child(1){
+    font-size: 14pt;
+}
+
+/* para pegar todos os a"s */
+
+header nav a{
+    text-decoration: none;
+}
+
+/* é row (alinha) flex direction alinha  */
+
+/*  align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    
+    ALINHAMENTO PERFEITO NA PAG*/
+
+
+.menu-hamburguer{
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 30px;
+}
+
+.traco {
+    background-color: black;
+    border-radius: 50px;
+    height: 3px;
+    margin: 3px 0;
+    width: 100%;
+}
+
+.sidebar {
+    background-color:  white;
+    box-shadow: 2px 2px 15px 2px rgba(0, 0, 0, 0.1);
+    grid-area: sidebar;
+    padding: 30px 0;
+
+}
+
+.sidebar nav {
+    align-items: center;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.sidebar nav a {
+    color: black;
+    text-decoration: none;
+}
+
+main {
+    grid-area: main;
+}
+
+
+/* media Query
+@media(permissão para oq estiver aqui dentro acontecer) {}
+OQ EU COLOCAR DENTRO DE PARENTESES DETERMINA, ACONTECERÁ SOMENTE SE A TELA TIVER ATÉ 900PX,
+A PARTIR DE 900 PX 
+DISPLAY: NONE; (ele fica escondido), apaga da página, ele não existe na página. 
+min-width- conforme aumenta o site */
+
+/* breakpoint para tablet */
+
+@media(min-width: 768px){
+    header nav {
+        display: block;
+    }
+
+    .menu-hamburguer{
+        display: none;
+    }
+}
+
+/* breakpoint para Notebooks pequenos */
+
+@media(min-width:992px) {
+    .grid {
+        grid-template-areas: 
+    "header header header header header"
+    "main main main . sidebar"
+    "main main main . sidebar";
+    }
+
+.sidebar {
+    border-radius: 25px;
+    box-shadow: 2px 2px 15px 2px rgba(0, 0, 0, 5);
+    margin: 5px;
+}
+
+.sidebar nav {
+    flex-direction: column;
+    justify-content: center;
+}
+}
+
+/* breakpoint para notebooks grandes e desktop a tela pode crescer, mas o texto continua tendo 1200px*/
+
+@media(min-width: 1200px) {
+    main{
+    margin: auto; 
+    max-width: 1200px;
+    }
+}
